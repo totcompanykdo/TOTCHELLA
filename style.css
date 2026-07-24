@@ -1,0 +1,2242 @@
+/* ==========================
+TOTCHELLA 2026
+========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:#0b0b0b;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+section{
+
+padding:100px 8%;
+
+}
+
+/* ==========================
+NAVBAR
+========================== */
+
+.navbar{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:80px;     
+
+padding:0 8%;    
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(15,10,5,.25);
+
+backdrop-filter:blur(30px);
+
+z-index:999;
+
+}
+
+.logo img{
+    height:120px;
+    width:auto;
+    display:block;
+}
+
+.nav-links{
+
+display:flex;
+
+gap:30px;
+
+list-style:none;
+
+}
+
+.nav-links a{
+
+color:white;
+
+font-size:15px;
+
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:#F5A623;
+
+}
+
+/* ==========================
+HERO
+========================== */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+background:
+
+linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.55)),
+
+url("images/hero/desert1.jpg");
+
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+transition:1s;
+
+}
+
+.hero-content{
+
+max-width:850px;
+
+}
+
+.hero h3{
+
+letter-spacing:8px;
+
+font-weight:400;
+
+margin-bottom:20px;
+
+color:#FFD27D;
+
+}
+
+.hero h1{
+
+font-size:110px;
+
+font-weight:800;
+
+margin-bottom:20px;
+
+color:#FFD27D;
+
+text-shadow:0 0 25px rgba(255,170,50,.35);
+
+}
+
+.hero p{
+
+font-size:23px;
+
+margin-bottom:40px;
+
+color:#FFF4D7;
+
+}
+
+/* ==========================
+COUNTDOWN
+========================== */
+
+.countdown{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+margin-bottom:45px;
+
+}
+
+.time{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+padding:18px;
+
+border-radius:18px;
+
+min-width:95px;
+
+}
+
+.time span{
+
+display:block;
+
+font-size:32px;
+
+font-weight:700;
+
+}
+
+.time small{
+
+color:#ddd;
+
+}
+
+/* ==========================
+BUTTON
+========================== */
+
+.ticket-btn{
+
+display:inline-block;
+
+padding:18px 45px;
+
+background:#F5A623;
+
+border-radius:999px;
+
+font-weight:700;
+
+color:white;
+
+transition:.35s;
+
+box-shadow:0 12px 35px rgba(245,166,35,.4);
+
+}
+
+.ticket-btn:hover{
+
+background:#ffbe45;
+
+transform:translateY(-5px);
+
+}/* ==========================
+SECTION TITLES
+========================== */
+
+.section-title{
+
+text-align:center;
+
+font-size:60px;
+
+color:#FFD27D;
+
+margin-bottom:15px;
+
+}
+
+.section-subtitle{
+
+text-align:center;
+
+font-size:20px;
+
+color:#ddd;
+
+margin-bottom:60px;
+
+}
+
+/* ==========================
+STAGES
+========================== */
+
+.stages{
+
+background:#120b06;
+
+}
+
+.stages-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:35px;
+
+margin-bottom:60px;
+
+}
+
+.stage-card{
+
+background:#24170d;
+
+border-radius:22px;
+
+overflow:hidden;
+
+transition:.35s;
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.stage-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 45px rgba(245,166,35,.35);
+
+}
+
+.stage-card img{
+
+display:block;
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:22px 22px 0 0;
+
+}
+
+.stage-card h3{
+
+padding-top:25px;
+
+text-align:center;
+
+font-size:28px;
+
+color:#FFD27D;
+
+}
+
+.stage-card p{
+
+text-align:center;
+
+padding:15px 25px 30px;
+
+color:#ddd;
+
+}
+
+/* ==========================
+VIEW SCHEDULE
+========================== */
+
+.schedule-preview{
+
+background:#24170d;
+
+border-radius:24px;
+
+padding:45px;
+
+text-align:center;
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.schedule-preview h2{
+
+font-size:42px;
+
+color:#FFD27D;
+
+margin-bottom:20px;
+
+}
+
+.schedule-preview p{
+
+color:#ddd;
+
+margin-bottom:30px;
+
+font-size:18px;
+
+}
+
+.schedule-btn{
+
+display:inline-block;
+
+padding:18px 45px;
+
+background:#F5A623;
+
+border-radius:999px;
+
+font-weight:700;
+
+transition:.35s;
+
+}
+
+.schedule-btn:hover{
+
+background:#ffbe45;
+
+transform:translateY(-5px);
+
+}
+/* ==========================
+FESTIVAL MAP
+========================== */
+
+.festival-map{
+    max-width:1200px;
+    margin:50px auto 0;
+    text-align:center;
+}
+
+.festival-map img{
+    width:100%;
+    max-width:1100px;
+    border-radius:24px;
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+    transition:.4s;
+}
+
+.festival-map img:hover{
+    transform:scale(1.02);
+}
+/* ==========================
+MAIN STAGE PAGE
+========================== */
+
+.main-stage-hero{
+
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
+url("images/hero/desert2.jpg");
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+}
+
+.stage-overlay{
+
+max-width:900px;
+
+padding:30px;
+
+}
+
+.main-stage-hero h1{
+
+font-size:95px;
+
+color:#FFD27D;
+
+margin-bottom:20px;
+
+text-shadow:0 0 25px rgba(255,170,60,.5);
+
+}
+
+.main-stage-hero p{
+
+font-size:24px;
+
+color:#eee;
+
+margin-bottom:35px;
+
+}
+
+.headline{
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+margin-bottom:45px;
+
+}
+
+.headline h2{
+
+font-size:42px;
+
+color:#F5A623;
+
+}
+
+.stage-info{
+padding:90px 8%;
+text-align:center;
+background:rgba(20,15,40,.75);
+backdrop-filter:blur(18px);
+border-top:1px solid rgba(255,255,255,.08);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.stage-info h2{
+font-size:52px;
+color:#ff6cff;
+text-shadow:
+0 0 10px #ff6cff,
+0 0 25px #7b5cff;
+margin-bottom:30px;
+}
+
+.stage-info p{
+font-size:22px;
+color:#ececec;
+line-height:1.9;
+max-width:950px;
+margin:auto;
+}
+
+.stage-schedule{
+
+padding:90px 8%;
+
+background:#1b120a;
+
+}
+
+.stage-schedule h2{
+
+text-align:center;
+
+font-size:48px;
+
+color:#FFD27D;
+
+margin-bottom:45px;
+
+}
+
+.stage-schedule ul{
+
+max-width:700px;
+
+margin:auto;
+
+list-style:none;
+
+}
+
+.stage-schedule li{
+
+padding:18px 25px;
+
+margin-bottom:18px;
+
+background:#2a1b0f;
+
+border-radius:16px;
+
+font-size:21px;
+
+transition:.3s;
+
+}
+
+.stage-schedule li:hover{
+
+transform:translateX(12px);
+
+background:#3a2515;
+
+}
+
+.stage-ticket-buttons{
+
+padding:90px 8%;
+
+display:flex;
+
+justify-content:center;
+
+gap:35px;
+
+flex-wrap:wrap;
+
+background:#120b06;
+
+}
+.artist-headliner{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.artist-headliner img{
+
+width:420px;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+border:4px solid #f5c542;
+
+box-shadow:0 0 25px rgba(245,197,66,.6);
+
+}
+
+.artist-headliner img:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 55px rgba(255,200,70,.8);
+
+}
+
+.artist-headliner h2{
+
+font-size:32px;
+
+color:#FFD27D;
+
+}
+
+.festival-ticket:hover{
+
+transform:translateY(-12px) scale(1.02);
+
+}
+
+.festival-ticket h2{
+
+font-size:38px;
+
+margin-bottom:10px;
+
+}
+
+.festival-ticket p{
+
+font-size:22px;
+
+margin-bottom:30px;
+
+font-weight:600;
+
+}
+
+.festival-ticket img{
+
+width:150px;
+
+margin:auto;
+
+margin-bottom:30px;
+
+}
+
+.ticket-details{
+
+display:flex;
+
+justify-content:space-between;
+
+font-weight:bold;
+
+font-size:18px;
+
+}
+/*==========================
+TICKET SELECTION
+==========================*/
+
+.stage-ticket-section{
+
+padding:100px 8%;
+
+background:#0d0d0d;
+
+}
+
+.ticket-choice{
+
+display:flex;
+
+justify-content:center;
+
+gap:45px;
+
+flex-wrap:wrap;
+
+margin-top:60px;
+
+}
+
+.ticket-box{
+
+width:360px;
+
+padding:45px;
+
+border-radius:28px;
+
+text-align:center;
+
+transition:.35s;
+
+cursor:pointer;
+
+}
+
+.vip-ticket{
+
+background:linear-gradient(135deg,#F5A623,#FFD77A);
+
+color:#222;
+
+box-shadow:0 0 35px rgba(245,166,35,.45);
+
+}
+
+.regular-ticket{
+
+background:linear-gradient(135deg,#3d3d3d,#777);
+
+color:white;
+
+box-shadow:0 0 30px rgba(255,255,255,.12);
+
+}
+
+.ticket-box:hover{
+
+transform:translateY(-12px) scale(1.03);
+
+}
+
+.ticket-box h3{
+
+font-size:34px;
+
+margin-bottom:18px;
+
+}
+
+.ticket-box p{
+
+font-size:18px;
+
+margin-bottom:35px;
+
+line-height:1.7;
+
+}
+
+/* ==========================
+VIP TICKET
+========================== */
+
+.festival-ticket{
+
+display:none;
+
+width:900px;
+
+max-width:95%;
+
+margin:70px auto;
+
+display:flex;
+
+position:relative;
+
+overflow:hidden;
+
+border-radius:30px;
+
+border:4px solid #FFD54A;
+
+background:
+linear-gradient(rgba(10,10,10,.78),rgba(10,10,10,.78)),
+url("images/hero/desert1.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+box-shadow:0 25px 70px rgba(0,0,0,.45);
+
+animation:ticketShow .6s ease;
+
+}
+
+.ticket-left{
+
+flex:1;
+
+padding:50px;
+
+color:white;
+
+backdrop-filter:blur(2px);
+
+}
+
+
+.ticket-left h1{
+
+font-size:58px;
+
+font-weight:900;
+
+letter-spacing:4px;
+
+color:#FFD54A;
+
+text-shadow:0 0 20px rgba(255,213,74,.55);
+
+margin-bottom:10px;
+
+}
+
+.vip-text{
+
+font-size:20px;
+
+letter-spacing:8px;
+
+font-weight:800;
+
+text-transform:uppercase;
+
+color:#fff4c4;
+
+margin-bottom:35px;
+
+}
+
+.ticket-left h2{
+
+font-size:46px;
+
+font-weight:800;
+
+margin-bottom:18px;
+
+}
+
+.ticket-left p{
+
+font-size:22px;
+
+margin:12px 0;
+
+}
+
+.qr-box{
+
+margin-top:35px;
+
+width:150px;
+
+height:150px;
+
+background:white;
+
+border-radius:15px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-weight:800;
+
+color:black;
+
+}
+
+.ticket-right{
+
+width:180px;
+
+background:rgba(255,213,74,.95);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:55px;
+
+font-weight:900;
+
+letter-spacing:12px;
+
+writing-mode:vertical-rl;
+
+text-orientation:mixed;
+
+color:#111;
+
+position:relative;
+
+}
+
+.ticket-right::before,
+.ticket-right::after{
+
+content:"";
+
+position:absolute;
+
+left:-18px;
+
+width:36px;
+
+height:36px;
+
+background:#0b0b0b;
+
+border-radius:50%;
+
+}
+
+.ticket-right::before{
+
+top:60px;
+
+}
+
+.ticket-right::after{
+
+bottom:60px;
+
+}
+
+.ticket-download{
+
+padding:16px 35px;
+
+border:none;
+
+background:#FFD54A;
+
+border-radius:999px;
+
+font-weight:700;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.ticket-download:hover{
+
+transform:scale(1.05);
+
+background:#ffe07b;
+
+}
+
+@keyframes ticketShow{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px) scale(.9);
+
+}
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+.ticket-artists{
+
+display:flex;
+
+justify-content:center;
+
+margin-top:25px;
+
+}
+
+.ticket-artist{
+
+width:220px;
+
+height:120px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+border:3px solid #d4b15f;
+
+box-shadow:0 0 18px rgba(212,177,95,.4);
+
+}
+
+.ticket-artist:hover{
+
+transform:scale(1.05);
+
+}
+
+.ticket-artist:hover{
+
+transform:rotate(-3deg) scale(1.05);
+
+box-shadow:0 0 45px rgba(255,213,74,.8);
+
+}
+
+.qr-box{
+
+margin-top:20px;
+
+margin-left: 180px;
+
+width:170px;
+
+height:170px;
+
+background:white;
+
+border-radius:14px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:0 0 18px rgba(255,255,255,.25);
+
+transform:translateY(-70px);
+
+}
+
+.qr-image{
+
+width:100%;
+
+height:100%;
+
+object-fit:contain;
+
+padding:8px;
+
+border-radius:10px;
+
+background:white;
+
+}
+.success-message{
+
+display:none;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.75);
+
+backdrop-filter:blur(8px);
+
+justify-content:center;
+
+align-items:center;
+
+z-index:99999;
+
+}
+
+.success-box{
+
+background:#111;
+
+padding:45px;
+
+border-radius:25px;
+
+text-align:center;
+
+width:380px;
+
+box-shadow:0 0 40px rgba(245,166,35,.45);
+
+animation:pop .4s ease;
+
+}
+
+.success-box h1{
+
+font-size:70px;
+
+margin-bottom:15px;
+
+}
+
+.success-box h2{
+
+font-size:34px;
+
+color:#FFD54A;
+
+margin-bottom:15px;
+
+}
+
+.success-box p{
+
+font-size:19px;
+
+color:white;
+
+}
+
+#rugularTicketCard{
+display:none;
+
+}
+
+#regularTicketCard .ticket-left{
+
+background:#f5f5f5;
+
+color:#111;
+
+}
+
+#regularTicketCard .ticket-right{
+
+background:#444;
+
+color:white;
+
+}
+
+#regularTicketCard .vip-text{
+
+color:#444;
+
+font-weight:700;
+
+}
+
+#regularTicketCard .ticket-artists{
+
+display:none;
+
+}
+
+#regularTicketCard .qr-box{
+
+background:white;
+
+}
+/* ==========================
+FESTIVAL SCHEDULE
+========================== */
+
+.schedule{
+
+padding:100px 8%;
+
+background:#111;
+
+}
+
+.schedule-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:50px;
+
+}
+
+.day-card{
+
+background:#1b1b1b;
+
+padding:30px;
+
+border-radius:22px;
+
+border:2px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
+}
+
+.day-card:hover{
+
+transform:translateY(-10px);
+
+border-color:#d4b15f;
+
+}
+
+.day-card h3{
+
+color:#d4b15f;
+
+font-size:26px;
+
+margin-bottom:10px;
+
+}
+
+.day-card h4{
+
+color:white;
+
+margin-bottom:20px;
+
+}
+
+.day-card ul{
+
+list-style:none;
+
+padding:0;
+
+margin:0;
+
+}
+
+.day-card li{
+
+padding:12px 0;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+color:#ddd;
+
+}
+
+.day-card li:last-child{
+
+border-bottom:none;
+
+}
+
+.day-card strong{
+
+color:#ffd75e;
+
+}
+artists-link{
+
+margin-top:40px;
+
+text-align:center;
+
+}
+
+.artists-link{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+margin:60px auto 10px;
+
+}
+
+.artists-btn{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+gap:10px;
+
+padding:20px 50px;
+
+background:linear-gradient(180deg,#d4b15f,#b89242);
+
+color:#111;
+
+font-weight:700;
+
+font-size:20px;
+
+text-decoration:none;
+
+border-radius:22px;
+
+transition:.3s;
+
+box-shadow:0 0 22px rgba(212,177,95,.35);
+
+}
+
+.artists-btn:hover{
+
+transform:translateY(-6px) scale(1.03);
+
+box-shadow:0 0 35px rgba(212,177,95,.55);
+
+}
+
+.arrow{
+
+font-size:30px;
+
+animation:bounce 1.3s infinite;
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(8px);
+
+}
+
+}
+/* ==========================
+TICKET HIDE
+========================== */
+
+#vipTicketCard{
+
+display:none;
+
+}
+
+#regularTicketCard{
+
+display:none;
+
+}
+.main-headliner{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid #ffd84d;
+box-shadow:0 0 25px rgba(255,216,77,.6);
+}
+.circle-headliner{
+width:220px !important;
+height:220px !important;
+border-radius:50% !important;
+object-fit:cover;
+}
+/* ==========================
+YUME STAGE
+========================== */
+
+.yume-features{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:30px;
+
+margin-top:50px;
+
+}
+
+.feature-card{
+
+background:rgba(40,20,60,.9);
+
+padding:35px;
+
+border-radius:22px;
+
+text-align:center;
+
+border:2px solid #b24cff;
+
+box-shadow:0 0 25px rgba(178,76,255,.35);
+
+transition:.35s;
+
+color:#fff;
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-10px) scale(1.04);
+
+box-shadow:0 0 45px rgba(178,76,255,.8);
+
+}
+
+.feature-card h3{
+
+margin-top:15px;
+
+font-size:24px;
+
+color:#ff7bff;
+
+}
+
+.feature-card p{
+
+margin-top:10px;
+
+line-height:1.7;
+
+color:#ddd;
+
+}
+
+.yume-page{
+
+background:
+radial-gradient(circle at top,#2b1248,#14091f,#09050f);
+
+animation:yumeGlow 8s infinite alternate;
+
+}
+
+@keyframes yumeGlow{
+
+0%{
+
+background:
+radial-gradient(circle at top,#2b1248,#14091f,#09050f);
+
+}
+
+50%{
+
+background:
+radial-gradient(circle at top,#1c3d78,#150d2c,#09050f);
+
+}
+
+100%{
+
+background:
+radial-gradient(circle at top,#4d1667,#14091f,#09050f);
+
+}
+
+}
+
+.yume-lineup .dj-card{
+
+border-left:5px solid #ff58ff;
+
+}
+.yume-hero{
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+url("images/gallery/show2.jpg") center center/cover no-repeat;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+.yume-hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(
+to bottom,
+rgba(0,0,0,.25),
+rgba(0,0,0,.55)
+);
+}
+
+.yume-hero .stage-overlay{
+position:relative;
+z-index:2;
+}
+.yume-lineup{
+padding:100px 8%;
+background:#120b06;
+text-align:center;
+}
+
+.yume-lineup h2{
+font-size:55px;
+color:#d87dff;
+margin-bottom:60px;
+text-shadow:0 0 20px #c84dff;
+}
+
+.dj-card{
+background:linear-gradient(135deg,#2b0d39,#17071d);
+border:2px solid #b84dff;
+border-radius:25px;
+padding:30px;
+margin:25px auto;
+max-width:700px;
+box-shadow:0 0 30px rgba(183,77,255,.35);
+transition:.35s;
+}
+
+.dj-card:hover{
+transform:translateY(-8px) scale(1.03);
+box-shadow:0 0 40px rgba(255,0,255,.6);
+}
+
+.dj-card .time{
+display:inline-block;
+padding:8px 18px;
+background:#ff00cc;
+color:white;
+border-radius:50px;
+font-weight:700;
+margin-bottom:18px;
+}
+
+.dj-card h3{
+font-size:34px;
+color:#fff;
+margin-bottom:10px;
+}
+
+.dj-card p{
+font-size:18px;
+color:#d7d7d7;
+}
+
+.special{
+background:linear-gradient(135deg,#ff008c,#7b00ff);
+border:none;
+}
+
+.special h3{
+color:white;
+}
+
+.special p{
+color:white;
+}
+/* ===== YUME HERO ONLY ===== */
+
+.yume-overlay h1{
+
+font-size:88px;
+
+font-weight:900;
+
+letter-spacing:8px;
+
+text-transform:uppercase;
+
+background:linear-gradient(
+90deg,
+#8b5cf6,
+#d946ef,
+#7c3aed
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+text-shadow:
+0 0 20px rgba(168,85,247,.8),
+0 0 45px rgba(217,70,239,.6);
+
+margin-top:-60px;
+
+margin-bottom:25px;
+
+}
+
+.yume-overlay p{
+
+font-size:32px;
+
+font-weight:600;
+
+color:#edd6ff;
+
+max-width:900px;
+
+margin:auto;
+
+line-height:1.6;
+
+text-shadow:0 0 12px rgba(120,60,255,.45);
+
+margin-bottom:60px;
+
+}
+
+.yume-overlay .ticket-btn{
+
+margin-top:40px;
+
+padding:18px 55px;
+
+font-size:22px;
+
+border-radius:50px;
+
+background:linear-gradient(90deg,#7c3aed,#d946ef);
+
+color:white;
+
+box-shadow:0 0 25px rgba(168,85,247,.6);
+
+transition:.3s;
+
+}
+
+.yume-overlay .ticket-btn:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 40px rgba(217,70,239,.9);
+
+}
+.yume-hero .stage-overlay h1{
+font-size:90px;
+font-weight:900;
+letter-spacing:3px;
+color:#ffffff;
+text-shadow:
+0 0 15px #ff4df8,
+0 0 35px #8d4dff,
+0 0 55px #5f6fff;
+}
+
+.yume-hero .stage-overlay p{
+font-size:28px;
+max-width:900px;
+margin:20px auto;
+line-height:1.6;
+color:white;
+text-shadow:0 0 10px rgba(0,0,0,.8);
+}
+
+.yume-hero .ticket-btn{
+padding:20px 60px;
+font-size:22px;
+border-radius:50px;
+box-shadow:0 0 25px rgba(255,215,0,.5);
+}
+/* ===== Tickets ===== */
+
+.ticket-card{
+
+width:380px;
+
+padding:35px;
+
+border-radius:28px;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+/* ===== VIP ===== */
+
+.vip-card{
+
+background:#f5a623;
+
+box-shadow:0 0 35px #ffd77a;
+
+color:#111;
+
+}
+
+.vip-card h3{
+
+font-size:14px;
+
+letter-spacing:2px;
+
+margin-bottom:8px;
+
+}
+
+.vip-card h1{
+
+font-size:40px;
+
+margin-bottom:18px;
+
+}
+
+.vip-card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+/* ===== Regular ===== */
+
+.regular-card{
+
+background:#3d3d3d;
+
+box-shadow:0 0 30px #777;
+
+color:#fff;
+
+}
+
+.regular-card h3{
+
+font-size:14px;
+
+letter-spacing:2px;
+
+margin-bottom:8px;
+
+}
+
+.regular-card h1{
+
+font-size:40px;
+
+margin-bottom:18px;
+
+}
+
+.regular-card p{
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+.ticket-cards{
+
+display:flex;
+
+justify-content:center;
+
+align-items:stretch;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+}
+.tickets-section{
+
+text-align:center;
+
+}
+
+.tickets-section h2{
+
+font-size:56px;
+
+color:#FFD27D;
+
+margin-bottom:18px;
+
+text-align:center;
+
+}
+
+.tickets-section > p{
+
+font-size:24px;
+
+color:#ffffff;
+
+text-align:center;
+
+max-width:800px;
+
+margin:0 auto 60px auto;
+
+line-height:1.7;
+
+}
+/* ===== Success Popup ===== */
+
+.success-popup{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.65);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:99999;
+
+backdrop-filter:blur(8px);
+
+}
+
+.success-box{
+
+background:#151515;
+
+padding:45px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:0 0 35px rgba(255,210,125,.45);
+
+max-width:450px;
+
+}
+
+.success-box h2{
+
+font-size:40px;
+
+color:#FFD27D;
+
+margin-bottom:18px;
+
+}
+
+.success-box p{
+
+font-size:22px;
+
+color:white;
+
+}
+/* ===== Tickets Page ===== */
+
+.tickets-page{
+
+padding:120px 8% 80px;
+
+text-align:center;
+
+}
+
+.tickets-page h1{
+
+font-size:60px;
+
+color:#FFD27D;
+
+margin-bottom:15px;
+
+}
+
+.tickets-page>p{
+
+font-size:24px;
+
+margin-bottom:60px;
+
+color:#fff;
+
+}
+
+.tickets-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+.stage-ticket-card{
+
+background:#171717;
+
+border-radius:25px;
+
+padding:40px;
+
+transition:.3s;
+
+box-shadow:0 0 25px rgba(255,210,125,.15);
+
+}
+
+.stage-ticket-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 40px rgba(255,210,125,.35);
+
+}
+
+.stage-ticket-card h2{
+
+font-size:34px;
+
+color:#FFD27D;
+
+margin-bottom:15px;
+
+}
+
+.stage-ticket-card p{
+
+font-size:20px;
+
+margin-bottom:30px;
+
+line-height:1.7;
+
+}
+.ticket-warning{
+
+display:none;
+
+opacity:0;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.65);
+
+z-index:999999;
+
+justify-content:center;
+
+align-items:center;
+
+transition:opacity .5s ease;
+
+}
+
+.warning-box{
+
+background:#111;
+
+border:2px solid #ff2d2d;
+
+border-radius:20px;
+
+padding:35px;
+
+width:420px;
+
+text-align:center;
+
+box-shadow:0 0 25px #ff2d2d;
+
+animation:redGlow 1s infinite alternate;
+
+}
+
+.warning-box h2{
+
+color:#ff2d2d;
+
+font-size:32px;
+
+margin-bottom:18px;
+
+}
+
+.arabic-warning{
+
+color:#FFD27D;
+
+font-size:22px;
+
+font-weight:bold;
+
+margin-bottom:15px;
+
+}
+
+.company-warning{
+
+color:#ff5555;
+
+font-weight:bold;
+
+}
+
+.warning-box p,
+
+.warning-box li{
+
+color:white;
+
+font-size:17px;
+
+line-height:1.8;
+
+}
+
+.warning-box ul{
+
+list-style:none;
+
+padding:0;
+
+margin:15px 0;
+
+}
+
+@keyframes redGlow{
+
+from{
+
+box-shadow:0 0 15px #ff2d2d;
+
+}
+
+to{
+
+box-shadow:0 0 45px #ff2d2d;
+
+}
+
+}
+/* =======================================
+   TOTCHELLA MOBILE RESPONSIVE
+======================================= */
+
+@media screen and (max-width:768px){
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+overflow-x:hidden;
+}
+
+/* ---------- NAVBAR ---------- */
+
+.navbar{
+padding:15px 20px;
+}
+
+.logo img{
+width:120px;
+height:auto;
+}
+
+.nav-links{
+gap:15px;
+font-size:14px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+/* ---------- HERO ---------- */
+
+.hero,
+.yume-hero{
+padding:30px 20px;
+text-align:center;
+}
+
+.hero h1,
+.yume-hero h1{
+font-size:42px;
+line-height:1.2;
+}
+
+.hero p,
+.yume-hero p{
+font-size:16px;
+line-height:1.6;
+margin:auto;
+width:95%;
+}
+
+.ticket-btn{
+padding:14px 30px;
+font-size:15px;
+}
+
+/* ---------- TITLES ---------- */
+
+.section-title{
+font-size:32px;
+}
+
+.section-subtitle{
+width:90%;
+margin:auto;
+font-size:16px;
+}
+
+/* ---------- GRIDS ---------- */
+
+.stages-grid,
+.artists-grid,
+.yume-features{
+display:grid;
+grid-template-columns:1fr;
+gap:25px;
+}
+
+/* ---------- CARDS ---------- */
+
+.artist-card,
+.stage-card,
+.feature-card,
+.dj-card{
+width:100%;
+margin:auto;
+}
+
+.artist-card img,
+.stage-card img{
+width:100%;
+height:auto;
+border-radius:18px;
+}
+
+/* ---------- STAGE INFO ---------- */
+
+.stage-info{
+padding:50px 20px;
+}
+
+.stage-info p{
+width:100%;
+font-size:16px;
+line-height:1.8;
+}
+
+/* ---------- FOOTER ---------- */
+
+.footer{
+padding:40px 20px;
+text-align:center;
+}
+
+img{
+max-width:100%;
+height:auto;
+}
+
+}
